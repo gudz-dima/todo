@@ -1,0 +1,8 @@
+<header class="header">
+  <h1 class="title">Список задач</h1>
+  <input class="new-todo"
+         placeholder="Что нужно сделать?"
+         [formControl]="txtInput"
+         (keyup.enter)="addToDo()"
+         autofocus>
+</header>

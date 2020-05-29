@@ -1,0 +1,15 @@
+<footer class="footer">
+  <div class="todo-count"><strong>{{todoCountActive}}</strong> активные задачи</div>
+
+  <div>
+    <ul class="filters">
+
+      <li *ngFor="let filtr of filtrsValid" (click)="changeFiltr(filtr)">
+        <a [ngClass]="{'selected': filtr === filtrNow}">{{filtr}}</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <button class="clear-completed" (click)="clearComplet()">Удалить выполенные</button>
+  </div>
+</footer>
